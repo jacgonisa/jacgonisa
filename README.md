@@ -30,10 +30,10 @@ Last and most importantly, as a first-gen uni student, I am very concerned about
 I'm a PhD student at the **University of Cambridge** (Department of Plant Sciences & King's College), funded by the prestigious **"la Caixa" Foundation Postgraduate Fellowship**. My research focuses on **bioinformatics**, **phylogenomics**, and **comparative genomics** in plant sciences.
 
 - Working in the **Genetic and Epigenetic Inheritance in Plants** group (Prof. Henderson)
+- Funded by **"la Caixa" Foundation Postgraduate Fellowship** - Selected from 1000+ applicants (€120,000+ funding)
 - MSc in Computational Biology| BSc (Hons) in Biochemistry 
 - 📊 Pipeline development, Nextflow, HPC computing (SLURM), long-read analysis, and comparative genomics
 - 🎓 Supervisor for "Mathematical and Computational Biology" course at Cambridge
-- 🎓 **"la Caixa" Foundation Postgraduate Fellowship** - Selected from 1000+ applicants (€120,000+ funding)
 
 ---
 
