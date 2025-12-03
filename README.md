@@ -90,9 +90,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 <div align="center">
 
-![Jacob's GitHub stats](https://github-readme-stats.vercel.app/api?username=jacgonisa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jacgonisa&layout=compact&theme=tokyonight&hide_border=true)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=jacgonisa&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
 </div>
 
