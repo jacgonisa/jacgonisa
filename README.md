@@ -11,13 +11,13 @@
 
 ---
 
-*Evolution is to me the most fascinating thing in Life.
+Evolution is to me the most fascinating thing in Life.
 
 I love fundamental research - I have been passionate about dissecting the principles of Life and Evolution since I was very young. Academic research allows me to think freely. For that, I chose to research the most paradoxical genomic region: the centromere. This is one of the most important regions in the chromosome and, strikingly, is the region that evolves more rapidly!
 
 I do much wet lab, but I am particularly trained in Bioinformatics. With the power of Computational Biology, I am driven to understand the complexities of Plant Sciences and unlock novel insights in agriculture, sustainability, and ecological preservation.
 
-Last and most importantly, as a first-gen uni student, I am very concerned about the unequal access to the university system between social classes. I actively fight against that problem.*
+Last and most importantly, as a first-gen uni student, I am very concerned about the unequal access to the university system between social classes. I actively fight against that problem.
 
 🌱 **Plants are my plans for the future!**
 
