@@ -90,8 +90,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 <div align="center">
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=jacgonisa&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
-
+[![GitHub Streak](https://streak-stats.demolab.com/?user=jacgonisa)](https://git.io/streak-stats)
 </div>
 
 ---
