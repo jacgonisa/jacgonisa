@@ -48,6 +48,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ### Bioinformatics & Data Science
+![Nextflow](https://img.shields.io/badge/Nextflow-24B064?style=for-the-badge&logo=nextflow&logoColor=white)
 ![ETE Toolkit](https://img.shields.io/badge/ETE_Toolkit-Phylogenomics-orange?style=for-the-badge)
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
