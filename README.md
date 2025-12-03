@@ -90,7 +90,11 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=jacgonisa)](https://git.io/streak-stats)
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jacgonisa)](https://github.com/anuraghazra/github-readme-stats)
+  <img src="https://github-readme-stats.vercel.app/api?username=jacgonisa&show_icons=true&theme=tokyonight&hide_border=true" width="48%" alt="GitHub stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jacgonisa&theme=tokyonight&hide_border=true" width="48%" alt="GitHub streak stats" />
+</div>
+<div align="center" style="margin-top: 15px;">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jacgonisa&theme=react-dark&hide_border=true&area=true" width="90%" alt="GitHub activity graph" />
 
 </div>
 
