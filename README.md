@@ -96,13 +96,6 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 </div>
 
----
-
-## Fun Facts
-
-- 🎾 Tennis team member at King's College Cambridge
-- 🌍 Languages: English (C2), Spanish (Native), French (B1), Italian (B1), German (A2/B1)
-- 🎤 Frequent conference speaker & symposium organizer
 
 ---
 
