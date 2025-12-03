@@ -25,7 +25,7 @@ Last and most importantly, as a first-gen uni student, I am very concerned about
 
 ---
 
-## 👨‍🔬 About Me
+## About Me
 
 I'm a PhD student at the **University of Cambridge** (Department of Plant Sciences & King's College), funded by the prestigious **"la Caixa" Foundation Postgraduate Fellowship**. My research focuses on **bioinformatics**, **phylogenomics**, and **comparative genomics** in plant sciences.
 
@@ -37,7 +37,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 
 <div align="center">
 
@@ -68,7 +68,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## 🔬 Current Research Focus
+## Current Research Focus
 
 - 🧬 **Phylogenomics** and **comparative genomics** across plant species
 - 🌿 **Genetic and epigenetic inheritance** in plants
@@ -78,7 +78,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## 📚 Selected Publications
+## Selected Publications
 
 **Włodzimierz, P.*, Perez-Roman, E.*, et al.** (including **González-Isa, J.**) (2025). *Cyclical evolution of centromere architecture across 193 eukaryote species.* **Submitted**
 
@@ -86,7 +86,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 
@@ -98,7 +98,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## 🌱 Fun Facts
+## Fun Facts
 
 - 🎾 Tennis team member at King's College Cambridge
 - 🌍 Languages: English (C2), Spanish (Native), French (B1), Italian (B1), German (A2/B1)
