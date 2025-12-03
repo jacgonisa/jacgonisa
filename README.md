@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧬 Jacob González Isa
+# Jacob González Isa
 
 ### PhD Student in Plant Sciences (Bioinformatics) | University of Cambridge
 
