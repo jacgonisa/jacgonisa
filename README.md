@@ -60,9 +60,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![SPARQL](https://img.shields.io/badge/SPARQL-E8274B?style=for-the-badge)
 
-### Molecular Biology
-![CRISPR](https://img.shields.io/badge/CRISPR/Cas9-Gene_Editing-green?style=for-the-badge)
-![Cloning](https://img.shields.io/badge/Molecular_Cloning-Gateway_Gibson-lightgreen?style=for-the-badge)
+
 
 </div>
 
@@ -91,6 +89,9 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 <div align="center">
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=jacgonisa)](https://git.io/streak-stats)
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jacgonisa)](https://github.com/anuraghazra/github-readme-stats)
+
 </div>
 
 ---
