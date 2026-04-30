@@ -27,7 +27,7 @@ Last and most importantly, as a first-gen uni student, I am very concerned about
 
 ## About Me
 
-I'm a PhD student at the **University of Cambridge** (Department of Plant Sciences & King's College), funded by the prestigious **"la Caixa" Foundation Postgraduate Fellowship**. My research focuses on **bioinformatics**, **phylogenomics**, and **comparative genomics** in plant sciences.
+I'm a PhD student at the **University of Cambridge** (Department of Plant Sciences & King's College), funded by the **"la Caixa" Foundation Postgraduate Fellowship**. My research focuses on **bioinformatics**, **phylogenomics**, and **comparative genomics** in plant sciences.
 
 - Working in the **Genetic and Epigenetic Inheritance in Plants** group (Prof. Henderson)
 - Funded by **"la Caixa" Foundation Postgraduate Fellowship** - Selected from 1000+ applicants (€120,000+ funding)
