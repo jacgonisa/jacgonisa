@@ -66,13 +66,13 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## Current Research Focus
+## Current research focus
 
-- 🧬 **Phylogenomics** and **comparative genomics** across plant species
-- 🌿 **Genetic and epigenetic inheritance** in plants
-- 💻 **Bioinformatics pipeline development** for genomic analysis
-- 📊 Long-read sequencing analysis and genome assembly
-- 🔍 Metagenomic functional enzyme detection
+- **Phylogenomics** and **comparative genomics** across plant species
+- **Genetic and epigenetic inheritance** in plants
+- **Bioinformatics pipeline development** for genomic analysis
+- Long-read sequencing analysis and genome assembly
+- Metagenomic functional enzyme detection
 
 ---
 
