@@ -99,7 +99,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ---
 
-## 📫 Let's Connect!
+## Let's connect!
 
 I'm always interested in collaborating on exciting projects in **computational biology**, **plant genomics**, and **bioinformatics**. Feel free to reach out!
 
@@ -115,7 +115,7 @@ I'm always interested in collaborating on exciting projects in **computational b
 
 <div align="center">
 
-### 💡 *"Plants are my plans for the future!"*
+### *"Plants are my plans for the future!"*
 
 ![Profile Views](https://komarev.com/ghpvc/?username=jacgonisa&color=brightgreen&style=flat-square)
 
