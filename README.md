@@ -8,6 +8,7 @@
 [![Email](https://img.shields.io/badge/Email-jacobgisa17%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jacobgisa17@gmail.com)
 [![Twitter](https://img.shields.io/badge/Twitter-@JacobGIsa-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/JacobGIsa)
 [![Linktree](https://img.shields.io/badge/Linktree-jacgonisa-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jacgonisa)
+[![Portfolio](https://img.shields.io/badge/Portfolio-GitHub%20Pages-2f6f4e?style=for-the-badge&logo=githubpages&logoColor=white)](https://jacgonisa.github.io/jacgonisa/)
 
 ---
 

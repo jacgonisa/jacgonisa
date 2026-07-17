@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob González Isa | Computational Biology & Centromere Evolution</title>
+  <meta name="description" content="Jacob González Isa, PhD student at the University of Cambridge working at the interface of wet lab biology, bioinformatics, phylogenomics and centromere evolution.">
+  <meta property="og:title" content="Jacob González Isa">
+  <meta property="og:description" content="Computational biology, comparative genomics and centromere evolution.">
+  <meta property="og:image" content="assets/profile.png">
+  <link rel="icon" href="assets/profile.png">
+  <style>
+    :root {
+      --ink: #172018;
+      --muted: #5f6b61;
+      --line: #dfe6dc;
+      --paper: #fbfcf8;
+      --panel: #ffffff;
+      --green: #2f6f4e;
+      --moss: #6f8f47;
+      --blue: #245e8f;
+      --gold: #c48a1b;
+      --rose: #b64f5c;
+      --shadow: 0 16px 42px rgba(38, 52, 36, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(251, 252, 248, .92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand { font-weight: 800; letter-spacing: .02em; color: var(--green); }
+    .navlinks { display: flex; gap: 18px; align-items: center; font-size: 14px; }
+    .navlinks a { color: var(--ink); }
+    .navlinks .button { color: #fff; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 700;
+      border: 1px solid var(--green);
+    }
+    .button.secondary {
+      color: var(--green);
+      background: transparent;
+      border-color: #9eb49b;
+    }
+    .button:hover { text-decoration: none; filter: brightness(.96); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) 340px;
+      gap: 44px;
+      align-items: center;
+      padding: 62px 0 48px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 720px;
+      margin: 22px 0 0;
+      font-size: clamp(18px, 2vw, 22px);
+      color: #344238;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .chip {
+      display: inline-flex;
+      padding: 5px 8px;
+      border-radius: 5px;
+      background: #edf3e8;
+      color: #314236;
+      font-size: 13px;
+      border: 1px solid #dbe6d6;
+    }
+    .portrait {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 14px;
+      border-radius: 8px;
+    }
+    .portrait img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .portrait p {
+      margin: 12px 2px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section { padding: 46px 0; border-bottom: 1px solid var(--line); }
+    .section-head {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: var(--green);
+    }
+    .section-head p {
+      margin: 0;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 4px 16px rgba(37, 52, 36, .05);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.25; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .card .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gold);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 32px;
+    }
+    .item {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 22px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+    .item:first-child { border-top: 0; padding-top: 0; }
+    .date { color: var(--muted); font-size: 14px; font-weight: 700; }
+    .item h3 { margin: 0 0 4px; font-size: 18px; }
+    .item p { margin: 0; color: var(--muted); }
+
+    .project-list {
+      display: grid;
+      gap: 12px;
+    }
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .project h3 { margin: 0 0 4px; font-size: 18px; }
+    .project p { margin: 0; color: var(--muted); }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill {
+      padding: 7px 10px;
+      border: 1px solid #d6e2d2;
+      background: #f3f7ef;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #26382b;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .contact a {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+    }
+    .contact span { color: var(--muted); }
+    .contact a:hover { text-decoration: none; border-color: #9eb49b; }
+
+    footer {
+      padding: 28px 0 46px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .nav { height: auto; padding: 12px 0; align-items: flex-start; }
+      .navlinks { flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+      .hero { grid-template-columns: 1fr; padding-top: 42px; }
+      .portrait { width: min(340px, 100%); }
+      .section-head, .timeline { grid-template-columns: 1fr; gap: 14px; }
+      .grid, .contact { grid-template-columns: 1fr; }
+      .item { grid-template-columns: 1fr; gap: 4px; }
+      .project { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 22px, 1160px); }
+      .navlinks a:not(.button) { display: none; }
+      h1 { font-size: 42px; }
+      .hero-actions .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="#top">JGI</a>
+      <div class="navlinks">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#media">Outreach</a>
+        <a href="#contact">Contact</a>
+        <a class="button" href="assets/Jacob_Gonzalez_Isa_CV.pdf">CV PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="shell hero">
+      <div>
+        <div class="eyebrow">University of Cambridge · Plant Sciences · Bioinformatics</div>
+        <h1>Jacob González Isa</h1>
+        <p class="lede">I work at the interface of wet lab biology and computational genomics, asking evolutionary, epigenetic and genomic questions about one of the most paradoxical regions of the chromosome: the centromere.</p>
+        <div class="hero-actions">
+          <a class="button" href="assets/Jacob_Gonzalez_Isa_CV.pdf">Download CV</a>
+          <a class="button secondary" href="https://github.com/jacgonisa">GitHub</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/jacob-gonzalez-isa/">LinkedIn</a>
+        </div>
+        <div class="meta-strip" aria-label="Research keywords">
+          <span class="chip">Centromere evolution</span>
+          <span class="chip">Phylogenomics</span>
+          <span class="chip">Comparative genomics</span>
+          <span class="chip">Long-read analysis</span>
+          <span class="chip">Plant sciences</span>
+        </div>
+      </div>
+      <aside class="portrait">
+        <img src="assets/profile.png" alt="Portrait of Jacob González Isa">
+        <p>PhD student in Plant Sciences at the University of Cambridge, funded by a "la Caixa" Foundation Postgraduate Fellowship.</p>
+      </aside>
+    </div>
+
+    <section id="research">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Research</h2>
+          <p>My PhD project studies the centromere paradox: centromeres perform a deeply conserved chromosome-segregation function, yet their DNA sequence and chromatin environment can evolve rapidly.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Core question</span>
+            <h3>How do centromeres evolve while maintaining function?</h3>
+            <p>I combine comparative genomics, phylogenetics and epigenomic thinking to study how centromere architecture changes across eukaryotic lineages.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Approach</span>
+            <h3>Wet lab meets bioinformatics</h3>
+            <p>I use computational pipelines, genome annotation, long-read data and comparative analyses while staying close to the biological system.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Motivation</span>
+            <h3>Evolution as a lens for genome biology</h3>
+            <p>Centromeres offer a powerful model for understanding how essential genome functions persist through rapid molecular change.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="shell timeline">
+        <h2>Profile</h2>
+        <div>
+          <div class="item">
+            <div class="date">Current</div>
+            <div>
+              <h3>PhD Student, University of Cambridge</h3>
+              <p>Department of Plant Sciences and King's College; Genetic and Epigenetic Inheritance in Plants group.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="date">Fellowship</div>
+            <div>
+              <h3>"la Caixa" Foundation Postgraduate Fellow</h3>
+              <p>Competitive postgraduate fellowship supporting PhD research at Cambridge.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="date">Training</div>
+            <div>
+              <h3>Computational biology and biochemistry</h3>
+              <p>MSc-level computational biology training and BSc (Hons) in Biochemistry, with a focus on genome-scale biological questions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Selected work across comparative genomics, data visualization and bioinformatics communication.</p>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div>
+              <h3>DToL Centromere Atlas</h3>
+              <p>Interactive phylogenomic visualization of centromere architecture, satellite and transposon context across 325 eukaryotic species.</p>
+            </div>
+            <a class="button secondary" href="https://jacgonisa.github.io/dtol-centromere-atlas/">Open</a>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Centromere architecture across eukaryotes</h3>
+              <p>Comparative analysis linking centromere type, repeats, transposable elements, CENP-A/CENH3 and genome annotations across broad eukaryotic diversity.</p>
+            </div>
+            <a class="button secondary" href="https://github.com/jacgonisa">GitHub</a>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Bioinformatics learning notes</h3>
+              <p>A personal blog for practical bioinformatics, coding and genomics notes.</p>
+            </div>
+            <a class="button secondary" href="https://learning-bioinformatics-jacob.blogspot.com/">Blog</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Methods</h2>
+          <p>Tools and methods I use for genome-scale biological questions.</p>
+        </div>
+        <div class="skills">
+          <span class="skill">Python</span>
+          <span class="skill">R</span>
+          <span class="skill">Bash</span>
+          <span class="skill">Nextflow</span>
+          <span class="skill">SLURM / HPC</span>
+          <span class="skill">Phylogenomics</span>
+          <span class="skill">Comparative genomics</span>
+          <span class="skill">Long-read analysis</span>
+          <span class="skill">Genome annotation</span>
+          <span class="skill">Data visualization</span>
+          <span class="skill">Machine learning</span>
+          <span class="skill">Wet lab biology</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Outreach</h2>
+          <p>As a first-generation university student, I care deeply about public education and access to science. I use interviews, writing and public-facing projects to make research more visible.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Media</span>
+            <h3>Personal interviews and public education</h3>
+            <p>Interviews and media appearances about science, education and the path into research.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Writing</span>
+            <h3>Bioinformatics blog</h3>
+            <p>Notes on learning, coding and genomics for people building practical bioinformatics skills.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Community</span>
+            <h3>Open Bioinformatics Foundation Fellowship</h3>
+            <p>Supported attendance at the first SEBIBC Congress and engagement with the open bioinformatics community.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Open to collaboration around computational biology, plant genomics, phylogenomics, centromere evolution and science outreach.</p>
+        </div>
+        <div class="contact">
+          <a href="mailto:jacobgisa17@gmail.com"><strong>Personal email</strong><span>jacobgisa17@gmail.com</span></a>
+          <a href="mailto:jg2070@cam.ac.uk"><strong>Cambridge email</strong><span>jg2070@cam.ac.uk</span></a>
+          <a href="https://www.linkedin.com/in/jacob-gonzalez-isa/"><strong>LinkedIn</strong><span>jacob-gonzalez-isa</span></a>
+          <a href="https://linktr.ee/jacgonisa"><strong>Linktree</strong><span>jacgonisa</span></a>
+          <a href="https://x.com/JacobGIsa"><strong>X</strong><span>@JacobGIsa</span></a>
+          <a href="https://sites.google.com/view/jacob-gonzalez-isa/homepage"><strong>Previous website</strong><span>Google Sites archive</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">© 2026 Jacob González Isa. Built as a static GitHub Pages site.</div>
+  </footer>
+</body>
+</html>
