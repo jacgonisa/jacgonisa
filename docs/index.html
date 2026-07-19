@@ -3,33 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jacob González Isa — chasing the centromere paradox</title>
-  <meta name="description" content="Jacob González Isa: first-generation scientist from Andalusia, PhD student at the University of Cambridge, chasing the centromere paradox with long-read sequencing, computational biology and wet-lab genetics.">
+  <title>Jacob González Isa — Computational &amp; Evolutionary Genomics</title>
+  <meta name="description" content="Jacob González Isa — PhD candidate at the University of Cambridge studying the centromere paradox with long-read sequencing, comparative genomics and molecular genetics.">
   <meta property="og:title" content="Jacob González Isa">
-  <meta property="og:description" content="Chasing the strangest part of your chromosomes — the centromere. Andalusia → Cambridge · first-generation scientist.">
-  <meta property="og:image" content="assets/profile.png">
+  <meta property="og:description" content="PhD candidate, University of Cambridge. Computational and evolutionary genomics of the centromere.">
+  <meta property="og:image" content="assets/profile.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/profile.png">
+  <link rel="icon" href="assets/profile.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #201a15;
-      --muted: #6b6157;
-      --line: #e7ddce;
-      --paper: #fbf6ee;
-      --paper-2: #f5ecdd;
-      --panel: #fffdf9;
-      --green: #2f6f4e;
-      --green-deep: #21503a;
-      --moss: #6f8f47;
-      --terra: #c4622d;
-      --terra-soft: #e08a4f;
-      --gold: #c9922b;
+      --ink: #1b201d;
+      --muted: #5c655e;
+      --line: #e3e7e2;
+      --paper: #f8faf8;
+      --paper-2: #eef2ed;
+      --panel: #ffffff;
+      --green: #1f6b4f;
+      --green-deep: #143f2e;
+      --moss: #5f7d3f;
+      --slate: #37474a;
       --blue: #245e8f;
-      --shadow: 0 22px 50px -24px rgba(60, 40, 20, .35);
+      --amber: #b06a2c;
+      --shadow: 0 20px 44px -28px rgba(20, 30, 24, .4);
     }
 
     * { box-sizing: border-box; }
@@ -39,8 +38,7 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(1200px 600px at 88% -8%, #f7e7d3 0%, rgba(247,231,211,0) 60%),
-        radial-gradient(900px 500px at -6% 8%, #e9f0e2 0%, rgba(233,240,226,0) 55%),
+        radial-gradient(900px 480px at 92% -10%, #eef3ee 0%, rgba(238,243,238,0) 62%),
         var(--paper);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -48,217 +46,190 @@
 
     a { color: var(--green); text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    ::selection { background: #f2d3b4; }
+    ::selection { background: #cfe4d8; }
 
     .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 
     /* ---------- top bar ---------- */
     .topbar {
       position: sticky; top: 0; z-index: 40;
-      background: rgba(251, 246, 238, .82);
+      background: rgba(248, 250, 248, .85);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(12px);
     }
-    .nav {
-      height: 62px; display: flex; align-items: center;
-      justify-content: space-between; gap: 16px;
-    }
+    .nav { height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .brand {
-      font-family: Fraunces, Georgia, serif;
-      font-weight: 700; font-size: 20px; letter-spacing: .01em;
+      font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 19px;
       color: var(--green-deep); display: inline-flex; align-items: center; gap: 10px;
     }
     .brand .dot {
-      width: 15px; height: 15px; border-radius: 50%;
-      background: radial-gradient(circle at 32% 30%, #fff 0 12%, var(--terra) 55%, var(--green) 100%);
-      box-shadow: 0 0 0 3px rgba(196,98,45,.16);
-      animation: pulse 3.4s ease-in-out infinite;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: radial-gradient(circle at 34% 32%, #fff 0 14%, var(--green) 70%);
+      box-shadow: 0 0 0 3px rgba(31,107,79,.12);
     }
-    @keyframes pulse { 0%,100%{ transform: scale(1);} 50%{ transform: scale(1.18);} }
-    .navlinks { display: flex; gap: 20px; align-items: center; font-size: 14.5px; font-weight: 500; }
-    .navlinks a { color: var(--ink); }
+    .navlinks { display: flex; gap: 22px; align-items: center; font-size: 14.5px; font-weight: 500; }
+    .navlinks a { color: var(--slate); }
     .navlinks a:not(.button):hover { color: var(--green); text-decoration: none; }
 
     .button {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 42px; padding: 10px 18px; border-radius: 999px;
+      min-height: 42px; padding: 10px 18px; border-radius: 8px;
       background: var(--green); color: #fff !important; font-weight: 600;
-      border: 1px solid var(--green); transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      border: 1px solid var(--green); transition: transform .15s ease, box-shadow .15s ease;
     }
-    .button:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 10px 22px -12px rgba(47,111,78,.8); }
-    .button.secondary { color: var(--green) !important; background: transparent; border-color: #b7c9ad; }
-    .button.terra { background: var(--terra); border-color: var(--terra); }
-    .button.terra:hover { box-shadow: 0 10px 22px -12px rgba(196,98,45,.9); }
+    .button:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 10px 22px -14px rgba(20,63,46,.9); }
+    .button.secondary { color: var(--green-deep) !important; background: transparent; border-color: #c2cec3; }
+    .button.secondary:hover { background: #eef3ee; box-shadow: none; }
 
     /* ---------- hero ---------- */
-    .hero { display: grid; grid-template-columns: minmax(0,1.15fr) 380px; gap: 48px; align-items: center; padding: 70px 0 54px; }
+    .hero { display: grid; grid-template-columns: minmax(0,1.15fr) 420px; gap: 52px; align-items: center; padding: 74px 0 58px; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
-      color: var(--terra); font-size: 13px; font-weight: 700;
-      letter-spacing: .04em; margin-bottom: 18px;
-      background: #fbe7d5; border: 1px solid #f2cfb0; padding: 5px 12px; border-radius: 999px;
+      color: var(--green-deep); font-size: 12.5px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 20px;
+      background: #eaf2ec; border: 1px solid #d6e3d8; padding: 5px 12px; border-radius: 6px;
     }
     h1 {
-      font-family: Fraunces, Georgia, serif;
-      margin: 0; font-weight: 600;
-      font-size: clamp(46px, 8vw, 88px); line-height: .92; letter-spacing: -.015em;
+      font-family: Fraunces, Georgia, serif; margin: 0; font-weight: 600;
+      font-size: clamp(44px, 6.5vw, 74px); line-height: .98; letter-spacing: -.015em;
     }
-    h1 .wave { display: inline-block; transform-origin: 70% 70%; animation: wave 2.6s ease-in-out 1s 2; }
-    @keyframes wave { 0%,60%,100%{transform:rotate(0)} 20%{transform:rotate(16deg)} 40%{transform:rotate(-8deg)} }
-    .lede { max-width: 560px; margin: 24px 0 0; font-size: clamp(18px, 2vw, 21px); color: #3c3128; }
-    .lede b { color: var(--green-deep); font-weight: 700; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .lede { max-width: 600px; margin: 22px 0 0; font-size: clamp(17px, 1.6vw, 20px); color: #333c36; }
+    .lede b { color: var(--green-deep); font-weight: 600; }
+    .cred-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .cred {
+      display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; color: var(--slate);
+      background: var(--panel); border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px;
+    }
+    .cred::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex: none; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
     .quote-line {
       margin-top: 26px; font-family: Fraunces, Georgia, serif; font-style: italic;
-      font-size: 17px; color: var(--muted); border-left: 3px solid var(--terra-soft); padding-left: 14px;
+      font-size: 16.5px; color: var(--muted); border-left: 2px solid #c2cec3; padding-left: 14px;
     }
 
-    /* portrait + interactive chromosome */
     .hero-visual { position: relative; }
     .portrait {
-      position: relative; border-radius: 20px; overflow: hidden;
+      position: relative; border-radius: 14px; overflow: hidden;
       border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--panel);
     }
-    .portrait img { display: block; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+    .portrait img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 28%; }
     .portrait .cap {
-      position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 16px 12px;
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 16px 13px;
       color: #fff; font-size: 12.5px; font-weight: 500;
-      background: linear-gradient(to top, rgba(28,20,12,.82), rgba(28,20,12,0));
-    }
-    #chromo {
-      position: absolute; top: -26px; right: -26px; width: 120px; height: 120px;
-      filter: drop-shadow(0 8px 14px rgba(60,40,20,.25));
-      cursor: grab;
-    }
-    #chromo:active { cursor: grabbing; }
-    .chromo-hint {
-      position: absolute; top: 92px; right: -18px; font-size: 11px; color: var(--muted);
-      background: var(--panel); border: 1px solid var(--line); padding: 3px 8px; border-radius: 999px;
-      white-space: nowrap; box-shadow: 0 6px 14px -8px rgba(0,0,0,.3);
+      background: linear-gradient(to top, rgba(18,26,20,.85), rgba(18,26,20,0));
     }
 
     /* ---------- section scaffolding ---------- */
-    section { padding: 62px 0; }
-    .kicker { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--terra); margin: 0 0 12px; }
-    h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.02; margin: 0 0 14px; letter-spacing: -.01em; }
-    .section-intro { max-width: 680px; color: #443a30; font-size: 18px; margin: 0 0 8px; }
-
+    section { padding: 64px 0; }
+    .kicker { font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin: 0 0 12px; }
+    h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; margin: 0 0 14px; letter-spacing: -.01em; }
+    .section-intro { max-width: 700px; color: #3d453f; font-size: 17.5px; margin: 0 0 8px; }
     .divider { height: 1px; background: linear-gradient(to right, transparent, var(--line) 12%, var(--line) 88%, transparent); }
 
-    /* ---------- the paradox / research ---------- */
-    .paradox { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; }
-    .paradox-cards { display: grid; gap: 14px; }
-    .pc {
-      background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px;
-      box-shadow: 0 6px 20px -14px rgba(60,40,20,.4); transition: transform .18s ease, border-color .18s ease;
-    }
-    .pc:hover { transform: translateY(-3px); border-color: #d8c6a9; }
-    .pc h3 { font-family: Fraunces, serif; margin: 0 0 6px; font-size: 20px; font-weight: 600; }
-    .pc p { margin: 0; color: var(--muted); font-size: 15.5px; }
-    .pc .em { color: var(--terra); font-weight: 700; font-size: 13px; letter-spacing: .03em; text-transform: uppercase; }
+    /* ---------- research ---------- */
+    .paradox { display: grid; grid-template-columns: 1.1fr 1fr; gap: 46px; align-items: center; }
+    .paradox-cards { display: grid; gap: 12px; }
+    .pc { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; transition: transform .18s ease, border-color .18s ease; }
+    .pc:hover { transform: translateY(-2px); border-color: #c9d4ca; }
+    .pc h3 { font-family: Fraunces, serif; margin: 0 0 6px; font-size: 19px; font-weight: 600; }
+    .pc p { margin: 0; color: var(--muted); font-size: 15px; }
+    .pc .em { color: var(--green); font-weight: 600; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
 
     /* ---------- projects explorer ---------- */
-    .explorer { display: grid; grid-template-columns: 300px minmax(0,1fr); gap: 24px; margin-top: 30px; }
+    .explorer { display: grid; grid-template-columns: 300px minmax(0,1fr); gap: 22px; margin-top: 32px; }
     .proj-list { display: flex; flex-direction: column; gap: 8px; }
     .proj-tab {
       text-align: left; cursor: pointer; border: 1px solid var(--line); background: var(--panel);
-      border-radius: 14px; padding: 14px 16px; font: inherit; color: var(--ink);
-      display: flex; gap: 12px; align-items: flex-start; transition: all .16s ease; position: relative;
+      border-radius: 10px; padding: 14px 16px; font: inherit; color: var(--ink);
+      display: flex; gap: 12px; align-items: flex-start; transition: all .16s ease;
     }
-    .proj-tab:hover { border-color: #d8c6a9; transform: translateX(2px); }
-    .proj-tab.active { border-color: var(--green); background: #f0f6ec; box-shadow: 0 8px 22px -16px rgba(47,111,78,.9); }
-    .proj-tab .idx { font-family: Fraunces, serif; font-weight: 700; color: var(--terra); font-size: 15px; min-width: 20px; }
+    .proj-tab:hover { border-color: #c9d4ca; }
+    .proj-tab.active { border-color: var(--green); background: #eef4f0; box-shadow: inset 3px 0 0 var(--green); }
+    .proj-tab .idx { font-family: Fraunces, serif; font-weight: 600; color: var(--green); font-size: 14px; min-width: 20px; }
     .proj-tab .tt { font-weight: 600; font-size: 15px; line-height: 1.25; }
     .proj-tab .st { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
     .proj-tab.active .tt { color: var(--green-deep); }
 
-    .proj-stage {
-      border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: var(--panel);
-      box-shadow: var(--shadow); display: flex; flex-direction: column; min-height: 440px;
-    }
-    .stage-viz {
-      position: relative; height: 240px; background:
-        radial-gradient(120% 140% at 50% -20%, #fff 0%, var(--paper-2) 100%);
-      border-bottom: 1px solid var(--line); overflow: hidden;
-    }
+    .proj-stage { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: var(--shadow); display: flex; flex-direction: column; min-height: 440px; }
+    .stage-viz { position: relative; height: 240px; background: radial-gradient(120% 140% at 50% -20%, #fff 0%, var(--paper-2) 100%); border-bottom: 1px solid var(--line); overflow: hidden; }
     .stage-viz svg, .stage-viz canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-    .viz-note {
-      position: absolute; left: 14px; bottom: 12px; font-size: 12px; color: var(--muted);
-      background: rgba(255,253,249,.85); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); z-index: 2;
-    }
+    .viz-note { position: absolute; left: 14px; bottom: 12px; font-size: 12px; color: var(--muted); background: rgba(255,255,255,.88); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); z-index: 2; }
     .stage-body { padding: 22px 24px 24px; }
     .stage-body .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-    .tag { font-size: 11.5px; font-weight: 600; color: var(--green-deep); background: #eaf2e3; border: 1px solid #d6e6cb; padding: 4px 9px; border-radius: 999px; }
-    .tag.terra { color: #9a4a1f; background: #fbe7d5; border-color: #f2cfb0; }
-    .stage-body h3 { font-family: Fraunces, serif; font-weight: 600; font-size: 24px; margin: 0 0 8px; line-height: 1.1; }
-    .stage-body p { margin: 0 0 16px; color: #443a30; font-size: 16px; }
+    .tag { font-size: 11.5px; font-weight: 600; color: var(--slate); background: #eef2ed; border: 1px solid #dde4dd; padding: 4px 9px; border-radius: 6px; }
+    .tag.feat { color: #fff; background: var(--green); border-color: var(--green); }
+    .stage-body h3 { font-family: Fraunces, serif; font-weight: 600; font-size: 23px; margin: 0 0 8px; line-height: 1.12; }
+    .stage-body p { margin: 0 0 16px; color: #3d453f; font-size: 15.5px; }
     .stage-links { display: flex; flex-wrap: wrap; gap: 10px; }
-    .stage-links a { font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; border: 1px solid #b7c9ad; }
-    .stage-links a:hover { text-decoration: none; background: #f0f6ec; }
+    .stage-links a { font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; border: 1px solid #c2cec3; color: var(--green-deep); }
+    .stage-links a:hover { text-decoration: none; background: #eef3ee; }
 
     /* ---------- journey ---------- */
-    .journey { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 34px; position: relative; }
-    .journey::before { content:""; position:absolute; left:6%; right:6%; top: 34px; height:2px; background: repeating-linear-gradient(to right, var(--terra-soft) 0 8px, transparent 8px 16px); opacity:.6; }
+    .journey { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-top: 34px; position: relative; }
+    .journey::before { content:""; position:absolute; left:6%; right:6%; top: 33px; height:2px; background: var(--line); }
     .stop { text-align: center; padding: 0 8px; position: relative; }
-    .stop .pin {
-      width: 22px; height: 22px; border-radius: 50%; margin: 24px auto 12px; background: var(--panel);
-      border: 3px solid var(--terra); position: relative; z-index: 1; transition: transform .18s ease, background .18s ease;
-    }
-    .stop:hover .pin { transform: scale(1.25); background: var(--terra); }
-    .stop .yr { font-weight: 700; color: var(--green-deep); font-size: 14px; }
+    .stop .pin { width: 18px; height: 18px; border-radius: 50%; margin: 24px auto 12px; background: var(--panel); border: 3px solid var(--green); position: relative; z-index: 1; transition: transform .18s ease, background .18s ease; }
+    .stop:hover .pin { transform: scale(1.2); background: var(--green); }
+    .stop .yr { font-weight: 600; color: var(--green); font-size: 13px; letter-spacing: .02em; }
     .stop .pl { font-family: Fraunces, serif; font-weight: 600; font-size: 17px; margin: 2px 0; }
     .stop .ds { font-size: 13px; color: var(--muted); }
 
     /* ---------- press wall ---------- */
-    .press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
-    .press {
-      display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
-      padding: 20px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; color: var(--ink);
-    }
-    .press:hover { text-decoration: none; transform: translateY(-3px); border-color: #d8c6a9; box-shadow: 0 16px 30px -22px rgba(60,40,20,.6); }
-    .press .outlet { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--terra); }
-    .press .headline { font-family: Fraunces, serif; font-size: 18px; font-weight: 600; margin: 8px 0 8px; line-height: 1.25; }
-    .press .meta { font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 10px; }
-    .press .reach { color: var(--green); font-weight: 700; }
+    .press-feature { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; margin: 28px 0 18px; align-items: center; }
+    .pf-media { position: relative; display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .pf-media img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform .5s ease; }
+    .pf-media:hover img { transform: scale(1.035); }
+    .pf-badge { position: absolute; left: 12px; top: 12px; display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #fff; background: rgba(18,26,20,.82); padding: 6px 11px; border-radius: 999px; backdrop-filter: blur(4px); }
+    .pf-text .pf-kicker { font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--green); margin: 0 0 6px; }
+    .pf-text h3 { font-family: Fraunces, serif; font-weight: 600; font-size: 24px; margin: 0 0 8px; }
+    .pf-text p { color: var(--muted); font-size: 15.5px; margin: 0 0 16px; }
+    .press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .press { display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; color: var(--ink); }
+    .press:hover { text-decoration: none; transform: translateY(-3px); border-color: #c9d4ca; box-shadow: 0 16px 30px -24px rgba(20,30,24,.6); }
+    .press .outlet { font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--green); }
+    .press .headline { font-family: Fraunces, serif; font-size: 17.5px; font-weight: 600; margin: 8px 0 10px; line-height: 1.28; flex: 1; }
+    .press .meta { font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+    .press .reach { color: var(--green-deep); font-weight: 600; }
+    .press .arrow { color: var(--green); opacity: 0; transform: translateX(-4px); transition: all .18s ease; }
+    .press:hover .arrow { opacity: 1; transform: none; }
 
-    /* ---------- beyond the lab ---------- */
-    .beyond { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
-    .bcard { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: flex; gap: 16px; }
-    .bcard .emoji { font-size: 30px; line-height: 1; }
-    .bcard h3 { font-family: Fraunces, serif; margin: 0 0 6px; font-size: 20px; font-weight: 600; }
-    .bcard p { margin: 0; color: var(--muted); font-size: 15px; }
+    /* ---------- beyond research ---------- */
+    .beyond { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 28px; }
+    .bcard { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; }
+    .bcard .role { font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--green); }
+    .bcard h3 { font-family: Fraunces, serif; margin: 5px 0 6px; font-size: 19px; font-weight: 600; }
+    .bcard p { margin: 0; color: var(--muted); font-size: 14.5px; }
     .bcard a { font-weight: 600; }
 
     .langs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-    .lang { font-size: 13.5px; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); }
+    .lang { font-size: 13.5px; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--slate); }
     .lang b { color: var(--green-deep); }
 
     /* ---------- contact ---------- */
-    #contact { background: linear-gradient(180deg, transparent, #efe6d6 40%); border-radius: 28px 28px 0 0; }
+    #contact { background: linear-gradient(180deg, transparent, #edf2ed 45%); border-radius: 24px 24px 0 0; }
     .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 26px; }
-    .contact-grid a {
-      display: flex; flex-direction: column; gap: 3px; padding: 16px 18px; border: 1px solid var(--line);
-      border-radius: 14px; background: var(--panel); color: var(--ink); transition: transform .16s ease, border-color .16s ease;
-    }
+    .contact-grid a { display: flex; flex-direction: row; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--ink); transition: transform .16s ease, border-color .16s ease; }
     .contact-grid a:hover { text-decoration: none; transform: translateY(-2px); border-color: var(--green); }
-    .contact-grid .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--terra); font-weight: 700; }
-    .contact-grid .val { font-weight: 600; }
+    .ci { width: 38px; height: 38px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 9px; background: #eef3ee; color: var(--green-deep); transition: background .16s ease, color .16s ease; }
+    .contact-grid a:hover .ci { background: var(--green); color: #fff; }
+    .ci svg { width: 19px; height: 19px; fill: currentColor; }
+    .ctext { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+    .contact-grid .lbl { font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--green); font-weight: 600; }
+    .contact-grid .val { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-    footer { padding: 30px 0 50px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    footer { padding: 30px 0 48px; color: var(--muted); font-size: 13.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity: 1; transform: none; }
 
-    /* ---------- responsive ---------- */
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; padding-top: 46px; gap: 34px; }
-      .hero-visual { max-width: 360px; }
-      #chromo { width: 96px; height: 96px; top: -20px; right: -14px; }
+      .hero { grid-template-columns: 1fr; padding-top: 48px; gap: 32px; }
+      .hero-visual { max-width: 380px; }
       .paradox { grid-template-columns: 1fr; gap: 26px; }
       .explorer { grid-template-columns: 1fr; }
       .proj-list { flex-direction: row; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
       .proj-tab { min-width: 210px; }
+      .press-feature { grid-template-columns: 1fr; }
       .press-grid { grid-template-columns: 1fr 1fr; }
       .journey { grid-template-columns: 1fr 1fr; gap: 18px 10px; }
       .journey::before { display: none; }
@@ -267,8 +238,8 @@
     @media (max-width: 560px) {
       .navlinks a:not(.button):not(.brand) { display: none; }
       .press-grid, .journey { grid-template-columns: 1fr; }
-      h1 { font-size: 46px; }
-      section { padding: 46px 0; }
+      h1 { font-size: 42px; }
+      section { padding: 48px 0; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; }
@@ -281,9 +252,9 @@
     <nav class="shell nav" aria-label="Main navigation">
       <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Jacob González Isa</a>
       <div class="navlinks">
-        <a href="#science">The science</a>
+        <a href="#research">Research</a>
         <a href="#projects">Projects</a>
-        <a href="#journey">My story</a>
+        <a href="#journey">Training</a>
         <a href="#press">Press</a>
         <a class="button" href="assets/Jacob_Gonzalez_Isa_CV.pdf">CV</a>
       </div>
@@ -294,52 +265,46 @@
     <!-- ================= HERO ================= -->
     <div class="shell hero">
       <div>
-        <span class="eyebrow">🌍 Andalusia → Cambridge · first-generation scientist</span>
-        <h1>Hi, I'm Jacob <span class="wave" aria-hidden="true">👋</span></h1>
-        <p class="lede">I chase the strangest part of your chromosomes — the <b>centromere</b>. It's absolutely essential for life, yet it evolves faster than almost anything else in the genome. Untangling that paradox is my PhD at the University of Cambridge.</p>
+        <span class="eyebrow">Computational &amp; evolutionary genomics</span>
+        <h1>Jacob González Isa</h1>
+        <p class="lede">PhD candidate at the <b>University of Cambridge</b> studying the <b>centromere paradox</b> — how the most essential region of the chromosome is also one of the fastest-evolving. I work across long-read sequencing, comparative genomics and molecular genetics, and build the tools that make previously invisible biology measurable.</p>
+        <div class="cred-strip">
+          <span class="cred">"la Caixa" Foundation Fellow</span>
+          <span class="cred">King's College, Cambridge</span>
+          <span class="cred">Dept. of Plant Sciences · Henderson Lab</span>
+        </div>
         <div class="hero-actions">
-          <a class="button terra" href="#projects">See what I build ↓</a>
-          <a class="button secondary" href="https://github.com/jacgonisa">GitHub</a>
+          <a class="button" href="#projects">View projects</a>
           <a class="button secondary" href="assets/Jacob_Gonzalez_Isa_CV.pdf">Download CV</a>
+          <a class="button secondary" href="https://github.com/jacgonisa">GitHub</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/jacob-gonzalez-isa/">LinkedIn</a>
         </div>
         <p class="quote-line">"Evolution is, to me, the most fascinating thing in life."</p>
       </div>
       <div class="hero-visual">
         <div class="portrait">
-          <img src="assets/profile.png" alt="Portrait of Jacob González Isa">
-          <div class="cap">PhD student, Dept. of Plant Sciences &amp; King's College, Cambridge · "la Caixa" Foundation Fellow</div>
+          <img src="assets/profile.jpg" alt="Portrait of Jacob González Isa">
+          <div class="cap">At the Department of Plant Sciences library, University of Cambridge</div>
         </div>
-        <!-- interactive draggable chromosome -->
-        <svg id="chromo" viewBox="0 0 100 100" role="img" aria-label="A little chromosome you can spin">
-          <g id="chromoG" transform="translate(50,50)">
-            <path d="M-30,-34 C-14,-20 -14,-6 -6,-4 C-14,-2 -14,12 -30,26 C-22,34 -12,30 -4,10 C-2,10 2,10 4,10 C12,30 22,34 30,26 C14,12 14,-2 6,-4 C14,-6 14,-20 30,-34 C22,-40 12,-34 4,-12 C2,-12 -2,-12 -4,-12 C-12,-34 -22,-40 -30,-34 Z"
-                  fill="#6f8f47" stroke="#3f5a2a" stroke-width="1.4" stroke-linejoin="round"/>
-            <circle cx="0" cy="-1" r="7" fill="#c4622d">
-              <animate attributeName="r" values="6;8;6" dur="2.6s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="0" cy="-1" r="3" fill="#fbe7d5"/>
-          </g>
-        </svg>
-        <span class="chromo-hint">↑ drag me — I'm a centromere</span>
       </div>
     </div>
 
     <div class="shell"><div class="divider"></div></div>
 
-    <!-- ================= THE SCIENCE ================= -->
-    <section id="science">
+    <!-- ================= RESEARCH ================= -->
+    <section id="research">
       <div class="shell reveal">
-        <p class="kicker">The paradox I study</p>
+        <p class="kicker">Research</p>
         <div class="paradox">
           <div>
-            <h2>The most important part of your DNA<br>evolves the fastest. Why?</h2>
-            <p class="section-intro">Every time a cell divides, the centromere is the anchor that pulls chromosomes apart. Get it wrong and you get cancer, infertility, or a dead cell. So you'd expect it to be frozen by evolution — untouchable. Instead, its DNA is a churning sea of repeats that turns over rapidly between species. That contradiction is the <b>centromere paradox</b>, and it's what I get up for.</p>
-            <p class="section-intro">I attack it from both sides: as a <b>bioinformatician</b> (long-read genomes, phylogenomics, comparative genomics, 3C, protein language models) and in the <b>wet lab</b> (IP-MS, Pore-C, Nanopore sequencing on the PromethION). I like building the tool that makes previously invisible biology finally measurable.</p>
+            <h2>The most important part of your DNA<br>is also one of the fastest to change.</h2>
+            <p class="section-intro">Every time a cell divides, the centromere is the anchor that pulls your chromosomes apart. Get it wrong and the cell ends up with the wrong number of chromosomes — something behind cancer and infertility. So you'd expect evolution to leave it untouched. Instead, the DNA underneath is a churning sea of repeats that gets rewritten surprisingly fast between species. That contradiction is the <b>centromere paradox</b> — and it's the heart of my PhD in the Henderson lab.</p>
+            <p class="section-intro">I come at it from both sides: as a <b>computational biologist</b> (long-read genomes, phylogenomics, comparative and 3C genomics, protein language models) and in the <b>wet lab</b> (IP–MS, Pore-C, Nanopore sequencing). What I enjoy most is building the tool that makes previously invisible biology finally measurable.</p>
           </div>
           <div class="paradox-cards">
-            <div class="pc"><span class="em">The question</span><h3>Essential, yet unstable</h3><p>How does a region survive under intense functional constraint while its sequence rewrites itself every few million years?</p></div>
-            <div class="pc"><span class="em">The approach</span><h3>Wet lab meets code</h3><p>I move between the bench and the cluster — Nanopore runs by day, Nextflow pipelines and SLURM jobs by night.</p></div>
-            <div class="pc"><span class="em">Where</span><h3>Henderson lab, Cambridge</h3><p>Genetic &amp; Epigenetic Inheritance in Plants — with 500,000 CPU-hours of Spanish supercomputing behind the "pancentromere" project.</p></div>
+            <div class="pc"><span class="em">Question</span><h3>Essential, yet unstable</h3><p>How does a region under intense functional constraint survive while its sequence rewrites itself over evolutionary time?</p></div>
+            <div class="pc"><span class="em">Approach</span><h3>Bench meets cluster</h3><p>Wet-lab sequencing paired with reproducible Nextflow / SLURM pipelines and comparative analysis at scale.</p></div>
+            <div class="pc"><span class="em">Group</span><h3><a href="https://www.plantsci.cam.ac.uk/research/groups/genetic-and-epigenetic-inheritance-plants" target="_blank" rel="noopener">Henderson lab</a>, Cambridge</h3><p>Genetic &amp; Epigenetic Inheritance in Plants — centromere architecture, recombination and chromatin folding.</p></div>
           </div>
         </div>
       </div>
@@ -350,9 +315,9 @@
     <!-- ================= PROJECTS EXPLORER ================= -->
     <section id="projects">
       <div class="shell reveal">
-        <p class="kicker">Things I've built &amp; figured out</p>
-        <h2>Poke around my projects</h2>
-        <p class="section-intro">Each one comes with a tiny interactive animation of the actual idea behind it. Click through — no genomics degree required.</p>
+        <p class="kicker">Selected projects &amp; tools</p>
+        <h2>What I build</h2>
+        <p class="section-intro">A selection of research projects and open-source tools. Each includes a short interactive visual of the underlying idea — select one to explore.</p>
 
         <div class="explorer">
           <div class="proj-list" id="projList" role="tablist" aria-label="Projects"></div>
@@ -366,50 +331,56 @@
     <!-- ================= JOURNEY ================= -->
     <section id="journey">
       <div class="shell reveal">
-        <p class="kicker">How a kid from Seville ended up here</p>
-        <h2>The scenic route</h2>
-        <p class="section-intro">First in my family to go to university. Five countries, a lot of scholarships, and one very stubborn obsession with evolution. Hover the stops.</p>
+        <p class="kicker">Training &amp; trajectory</p>
+        <h2>From Seville to Cambridge</h2>
+        <p class="section-intro">First in my family to attend university. A path across several countries, competitive scholarships throughout, and a consistent focus on genome evolution.</p>
         <div class="journey">
-          <div class="stop"><div class="pin"></div><div class="yr">2019–23</div><div class="pl">Seville 🇪🇸</div><div class="ds">BSc Biochemistry — top of the class (1st/150+)</div></div>
-          <div class="stop"><div class="pin"></div><div class="yr">2021–22</div><div class="pl">Turin 🇮🇹</div><div class="ds">Erasmus year — biotechnology &amp; a lot of Italian</div></div>
-          <div class="stop"><div class="pin"></div><div class="yr">2023</div><div class="pl">Vienna 🇦🇹</div><div class="ds">ISTA · Friml lab — CRISPR in Marchantia</div></div>
-          <div class="stop"><div class="pin"></div><div class="yr">2023–24</div><div class="pl">Madrid 🇪🇸</div><div class="ds">MSc Computational Biology — 9.56/10, 2nd in cohort</div></div>
-          <div class="stop"><div class="pin"></div><div class="yr">2024→</div><div class="pl">Cambridge 🇬🇧</div><div class="ds">PhD · "la Caixa" Fellow — awarded by the King of Spain</div></div>
+          <div class="stop"><div class="pin"></div><div class="yr">2019–23</div><div class="pl">Seville 🇪🇸</div><div class="ds">BSc Biochemistry</div></div>
+          <div class="stop"><div class="pin"></div><div class="yr">2021–22</div><div class="pl">Turin 🇮🇹</div><div class="ds">Erasmus year — biotechnology specialisation</div></div>
+          <div class="stop"><div class="pin"></div><div class="yr">2022</div><div class="pl">Cambridge 🇬🇧</div><div class="ds">Amgen Scholars Programme — Henderson lab</div></div>
+          <div class="stop"><div class="pin"></div><div class="yr">2023</div><div class="pl">Vienna 🇦🇹</div><div class="ds">ISTA · Friml lab — CRISPR in <em>Marchantia</em></div></div>
+          <div class="stop"><div class="pin"></div><div class="yr">2023–24</div><div class="pl">Madrid 🇪🇸</div><div class="ds">MSc Computational Biology · comparative phylogenomics at <a href="https://www.cbgp.upm.es/index.php/en/scientific-information/comparative-genomics-and-metagenomics" target="_blank" rel="noopener">CBGP</a> (Huerta-Cepas lab)</div></div>
+          <div class="stop"><div class="pin"></div><div class="yr">2024–</div><div class="pl">Cambridge 🇬🇧</div><div class="ds">PhD · "la Caixa" Foundation Fellow</div></div>
         </div>
       </div>
     </section>
 
     <div class="shell"><div class="divider"></div></div>
 
-    <!-- ================= PRESS / MEDIA ================= -->
+    <!-- ================= PRESS ================= -->
     <section id="press">
       <div class="shell reveal">
-        <p class="kicker">In the media</p>
-        <h2>Science, out loud</h2>
-        <p class="section-intro">As a first-generation student, telling this story publicly matters to me. A selection of interviews and features — including a run of pieces that reached about a million people.</p>
+        <p class="kicker">Media &amp; outreach</p>
+        <h2>Communicating science</h2>
+        <p class="section-intro">As a first-generation researcher, I care about widening access to science. Selected interviews and features — including a series that reached roughly a million people.</p>
+        <div class="press-feature">
+          <a class="pf-media" href="https://www.canalsur.es/television/la-tarde-aqui-y-ahora/jacob-gonzalez-joven-andaluz-brilla_1_1340747.html" target="_blank" rel="noopener">
+            <img src="assets/tv.jpg" alt="Jacob González Isa being interviewed on Canal Sur television">
+            <span class="pf-badge">▶ Canal Sur · Live TV</span>
+          </a>
+          <div class="pf-text">
+            <p class="pf-kicker">On air</p>
+            <h3>"La tarde, aquí y ahora"</h3>
+            <p>Live on Canal Sur's flagship afternoon show — talking centromeres, evolution, and the road from Seville to Cambridge.</p>
+            <a class="button" href="https://www.canalsur.es/television/la-tarde-aqui-y-ahora/jacob-gonzalez-joven-andaluz-brilla_1_1340747.html" target="_blank" rel="noopener">Watch the interview →</a>
+          </div>
+        </div>
         <div class="press-grid" id="pressGrid"></div>
       </div>
     </section>
 
     <div class="shell"><div class="divider"></div></div>
 
-    <!-- ================= BEYOND THE LAB ================= -->
+    <!-- ================= BEYOND RESEARCH ================= -->
     <section id="beyond">
       <div class="shell reveal">
-        <p class="kicker">Beyond the bench</p>
-        <h2>The other things I care about</h2>
+        <p class="kicker">Leadership &amp; service</p>
+        <h2>Beyond research</h2>
         <div class="beyond">
-          <div class="bcard"><div class="emoji">🪜</div><div><h3>Red Pioneros</h3><p>Founder &amp; president of an NGO helping first-generation, working-class high-schoolers reach university — the ladder I wish I'd had. <a href="https://www.redpioneros.org/">redpioneros.org →</a></p></div></div>
-          <div class="bcard"><div class="emoji">🍵</div><div><h3>Tea Phytologist</h3><p>Co-founder &amp; editor of Cambridge Plant Sciences' student-run satirical spoof journal — reviving a tradition first cooked up in 1908.</p></div></div>
-          <div class="bcard"><div class="emoji">🚀</div><div><h3>Nucleate Spain</h3><p>Co-Managing Director of the Spanish chapter of the largest global community of bio-innovators, mentoring teams from lab to market.</p></div></div>
-          <div class="bcard"><div class="emoji">🏆</div><div><h3>A few good days</h3><p>Nova 111 top-10 Spanish bioscientist · Extraordinary End-of-Degree Award · 3rd in the Portuguese Bioinformatics League with team <em>MrPlanta</em>.</p></div></div>
-        </div>
-        <div class="langs" aria-label="Languages">
-          <span class="lang"><b>English</b> C2</span>
-          <span class="lang"><b>Spanish</b> native</span>
-          <span class="lang"><b>French</b> B1</span>
-          <span class="lang"><b>Italian</b> B1</span>
-          <span class="lang"><b>German</b> A2/B1</span>
+          <div class="bcard"><span class="role">Founder &amp; President</span><h3>Red Pioneros</h3><p>An NGO helping first-generation and working-class students access higher education — the support I wish I'd had. <a href="https://www.redpioneros.org/">redpioneros.org →</a></p></div>
+          <div class="bcard"><span class="role">Co-Managing Director</span><h3>Nucleate Spain</h3><p>Co-leading the Spanish chapter of the largest global community of bio-innovators, mentoring teams translating research toward impact.</p></div>
+          <div class="bcard"><span class="role">Co-Founder &amp; Editor</span><h3>Tea Phytologist <span style="font-weight:400;font-style:italic;font-size:15px;color:var(--muted)">(XXI Century Editions)</span></h3><p>Cambridge Plant Sciences' student-run satirical journal, relaunched after four decades. <a href="https://www.plantsci.cam.ac.uk/news/tea-phytologist-satirical-journal-relaunched-after-40-years">Read more →</a></p></div>
+          <div class="bcard"><span class="role">Selected honours</span><h3>Awards &amp; distinctions</h3><p>Nova 111 top-10 Spanish bioscientist · Extraordinary End-of-Degree Award · Rafael del Pino Fellowship (declined) · 3rd, Portuguese Bioinformatics League.</p></div>
         </div>
       </div>
     </section>
@@ -417,23 +388,41 @@
     <!-- ================= CONTACT ================= -->
     <section id="contact">
       <div class="shell reveal">
-        <p class="kicker">Say hello</p>
-        <h2>Let's talk science (or tea)</h2>
-        <p class="section-intro">Always up for collaborations in genome evolution, centromeres, phylogenomics, long-read methods — or science outreach and first-gen mentoring.</p>
+        <p class="kicker">Contact</p>
+        <h2>Get in touch</h2>
+        <p class="section-intro">Open to collaborations in genome evolution, centromere biology, phylogenomics and long-read methods — or simply for a chat. Feel free to reach out.</p>
         <div class="contact-grid">
-          <a href="mailto:jg2070@cam.ac.uk"><span class="lbl">Cambridge email</span><span class="val">jg2070@cam.ac.uk</span></a>
-          <a href="mailto:jacobgisa17@gmail.com"><span class="lbl">Personal email</span><span class="val">jacobgisa17@gmail.com</span></a>
-          <a href="https://www.linkedin.com/in/jacob-gonzalez-isa/"><span class="lbl">LinkedIn</span><span class="val">jacob-gonzalez-isa</span></a>
-          <a href="https://github.com/jacgonisa"><span class="lbl">GitHub</span><span class="val">@jacgonisa</span></a>
-          <a href="https://x.com/JacobGIsa"><span class="lbl">X / Twitter</span><span class="val">@JacobGIsa</span></a>
-          <a href="https://linktr.ee/jacgonisa"><span class="lbl">Everything else</span><span class="val">linktr.ee/jacgonisa</span></a>
+          <a href="mailto:jg2070@cam.ac.uk">
+            <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+            <span class="ctext"><span class="lbl">Cambridge email</span><span class="val">jg2070@cam.ac.uk</span></span>
+          </a>
+          <a href="mailto:jacobgisa17@gmail.com">
+            <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+            <span class="ctext"><span class="lbl">Personal email</span><span class="val">jacobgisa17@gmail.com</span></span>
+          </a>
+          <a href="https://www.linkedin.com/in/jacob-gonzalez-isa/" target="_blank" rel="noopener">
+            <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+            <span class="ctext"><span class="lbl">LinkedIn</span><span class="val">jacob-gonzalez-isa</span></span>
+          </a>
+          <a href="https://github.com/jacgonisa" target="_blank" rel="noopener">
+            <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+            <span class="ctext"><span class="lbl">GitHub</span><span class="val">@jacgonisa</span></span>
+          </a>
+          <a href="https://x.com/JacobGIsa" target="_blank" rel="noopener">
+            <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+            <span class="ctext"><span class="lbl">X / Twitter</span><span class="val">@JacobGIsa</span></span>
+          </a>
+          <a href="https://linktr.ee/jacgonisa" target="_blank" rel="noopener">
+            <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.736 5.853l4.005-4.117 2.325 2.381-4.201 4.005h5.909v3.305h-5.937l4.229 4.108-2.325 2.334-5.741-5.769-5.741 5.769-2.325-2.325 4.229-4.108H1.226V8.122h5.909L2.934 4.117 5.259 1.736l4.005 4.117V0h4.472zM9.264 15.489h4.472V24H9.264z"/></svg></span>
+            <span class="ctext"><span class="lbl">All my links</span><span class="val">linktr.ee/jacgonisa</span></span>
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="shell">
-      <span>© 2026 Jacob González Isa · Made with curiosity in Cambridge 🌱</span>
-      <span>Built by hand · no templates were harmed</span>
+      <span>© 2026 Jacob González Isa · University of Cambridge</span>
+      <span>Built as a static site · <a href="https://github.com/jacgonisa/jacgonisa">source</a></span>
     </footer>
   </main>
 
@@ -443,68 +432,62 @@
      ===================================================================== */
   const PROJECTS = [
     {
-      id: 'cyclical',
       tt: 'Cyclical evolution of centromeres',
-      st: 'Co-first-author paper · 193 species',
-      tags: ['<span class="tag terra">First-author</span>', '<span class="tag">Comparative genomics</span>', '<span class="tag">Phylogenomics</span>'],
+      st: 'Comparative genomics · 193 species',
+      tags: ['<span class="tag feat">193 eukaryotes</span>', '<span class="tag">Comparative genomics</span>', '<span class="tag">Phylogenomics</span>'],
       h: 'A hidden cycle across 193 eukaryotes',
-      p: "We compared centromere architecture across 193 eukaryotic species and found it isn't random drift — it turns in a cycle: satellite arrays expand, homogenise, get invaded by transposons, then collapse and start again. I'm one of three co-first authors on this.",
-      note: 'Watch the cycle turn →',
-      links: [['In review, 2025', 'https://github.com/jacgonisa'], ['My GitHub ↗', 'https://github.com/jacgonisa']],
+      p: "By comparing centromere architecture across 193 eukaryotic species, we found its evolution is not random drift but a recurring cycle: satellite arrays expand, homogenise, are invaded by transposable elements, then collapse and renew. Manuscript in review (2025).",
+      note: 'The evolutionary cycle',
+      links: [['Code &amp; data ↗', 'https://github.com/jacgonisa']],
       viz: vizCycle
     },
     {
-      id: 'atlas',
       tt: 'DToL Centromere Atlas',
       st: 'Interactive tool · 325 species',
-      tags: ['<span class="tag">Data viz</span>', '<span class="tag">Tree of Life</span>', '<span class="tag">Web tool</span>'],
-      h: 'An atlas you can actually explore',
-      p: "I built an interactive phylogenomic browser mapping centromere type, satellite repeats and transposon context across 325 species from the Darwin Tree of Life. Spin the tree, click a species, and see how its centromere is wired.",
-      note: 'A living tree of life →',
+      tags: ['<span class="tag">Data visualisation</span>', '<span class="tag">Darwin Tree of Life</span>', '<span class="tag">Web tool</span>'],
+      h: 'An interactive atlas of centromere diversity',
+      p: "An interactive phylogenomic browser mapping centromere type, satellite repeats and transposon context across 325 species from the Darwin Tree of Life project. Navigate the tree and inspect how each species' centromere is organised.",
+      note: 'Phylogenomic browser',
       links: [['Open the Atlas ↗', 'https://jacgonisa.github.io/dtol-centromere-atlas/']],
       viz: vizTree
     },
     {
-      id: 'charla',
       tt: 'CHARLA',
       st: 'Nextflow pipeline · recombination',
-      tags: ['<span class="tag terra">Tool I built</span>', '<span class="tag">Nextflow</span>', '<span class="tag">Long-read</span>'],
-      h: 'Catching crossovers in the act',
-      p: "CHARLA (Centromeric Haplotype Analysis of Recombination using Long-reads of Arabidopsis) reads single long reads from hybrid pollen and, using k-mers, spots the exact point where the two parental chromosomes swapped — a crossover — even inside the messy centromere. Drag the crossover below.",
-      note: 'Drag the crossover point →',
+      tags: ['<span class="tag feat">Open-source tool</span>', '<span class="tag">Nextflow</span>', '<span class="tag">Long-read</span>'],
+      h: 'Mapping crossovers at k-mer resolution',
+      p: "CHARLA (Centromeric Haplotype Analysis of Recombination using Long-reads of Arabidopsis) analyses single long reads from hybrid pollen and, using k-mer profiling, localises the exact breakpoint where parental chromosomes recombine — including within the repetitive centromere.",
+      note: 'Crossover breakpoint · k-mer resolution',
       links: [['charla_nf on GitHub ↗', 'https://github.com/jacgonisa/charla_nf']],
       viz: vizCharla
     },
     {
-      id: 'porec',
-      tt: 'Pore-C: how DNA folds',
+      tt: 'Pore-C: 3D chromatin folding',
       st: 'Wet lab + long-read 3C',
       tags: ['<span class="tag">Wet lab</span>', '<span class="tag">3C genomics</span>', '<span class="tag">Chromatin</span>'],
-      h: 'How does centromeric DNA fold?',
-      p: "Using Pore-C — long-read chromosome-conformation capture — I read many pieces of DNA that were physically touching inside the nucleus at once. That lets me reconstruct how the centromere folds in 3D, something short reads simply can't see. Watch the fibre loop up.",
-      note: 'The fibre folds into contacts →',
-      links: [['Henderson lab ↗', 'https://www.plantsci.cam.ac.uk/']],
+      h: 'How centromeric DNA folds in the nucleus',
+      p: "Pore-C is long-read chromosome-conformation capture: each read reports multiple DNA segments that were physically in contact inside the nucleus. This makes it possible to reconstruct how the centromere folds in three dimensions — resolution unreachable with short reads.",
+      note: 'Chromatin contacts',
+      links: [['Henderson lab ↗', 'https://www.plantsci.cam.ac.uk/research/groups/genetic-and-epigenetic-inheritance-plants']],
       viz: vizFold
     },
     {
-      id: 'msc',
-      tt: 'Mining enzymes from metagenomes',
+      tt: 'Enzyme mining from metagenomes',
       st: 'MSc thesis · graded 10/10',
-      tags: ['<span class="tag terra">Award-winning</span>', '<span class="tag">Phylogenomics</span>', '<span class="tag">ETE toolkit</span>'],
-      h: 'Finding useful enzymes in the dark matter of life',
-      p: "For my MSc thesis (10/10, and 1st place at the EELISA competition in Budapest) I used phylogenomics to sift through metagenomes and pull out functional enzyme variants of biotechnological and ecological interest — new leaves on the tree, hiding in plain sight.",
-      note: 'Novel variants light up →',
-      links: [['CBGP Madrid ↗', 'https://www.cbgp.upm.es/']],
+      tags: ['<span class="tag feat">Award-winning</span>', '<span class="tag">Phylogenomics</span>', '<span class="tag">ETE toolkit</span>'],
+      h: 'Detecting functional enzyme variants at scale',
+      p: "My MSc thesis (graded 10/10; 1st place at the EELISA Scientific Student Competition, Budapest) used phylogenomics to mine metagenomes for functional enzyme variants of biotechnological and ecological interest — resolving novel activity hidden across the tree of life.",
+      note: 'Novel variants highlighted',
+      links: [['EELISA feature ↗', 'https://eelisa.eu/what-is-like-to-be-part-of-the-ii-eelisa-student-scientific-competition/']],
       viz: vizPhylo
     },
     {
-      id: 'tutorial',
-      tt: 'HiFi assembly tutorial',
+      tt: 'HiFi genome-assembly tutorial',
       st: 'Teaching · genome assembly',
       tags: ['<span class="tag">Teaching</span>', '<span class="tag">Long-read</span>', '<span class="tag">Open</span>'],
-      h: 'Teaching the world to assemble a genome',
-      p: "A hands-on tutorial for assembling genomes from PacBio HiFi long reads — part of my teaching at the K-mer Workshop for Biodiversity Genomics at the Wellcome Genome Campus, where I designed one of the practicals.",
-      note: 'Reads → contigs →',
+      h: 'Teaching genome assembly from HiFi reads',
+      p: "A hands-on, step-by-step tutorial for assembling a genome from PacBio HiFi long reads — walking through the workflow from raw reads to a contiguous assembly.",
+      note: 'Reads assembling into a contig',
       links: [['Tutorial on GitHub ↗', 'https://github.com/jacgonisa/tutorial-hifi-assembly']],
       viz: vizAssembly
     }
@@ -513,10 +496,9 @@
   const svgNS = 'http://www.w3.org/2000/svg';
   const mk = (n, a={}) => { const e = document.createElementNS(svgNS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
 
-  /* -------- render tabs + stage -------- */
   const listEl = document.getElementById('projList');
   const stageEl = document.getElementById('projStage');
-  let active = 0, vizCleanup = null;
+  let vizCleanup = null;
 
   PROJECTS.forEach((pr, i) => {
     const b = document.createElement('button');
@@ -528,7 +510,6 @@
   });
 
   function select(i){
-    active = i;
     [...listEl.children].forEach((c,j)=>c.classList.toggle('active', j===i));
     const pr = PROJECTS[i];
     if (typeof vizCleanup === 'function') { try{vizCleanup();}catch(e){} vizCleanup = null; }
@@ -541,7 +522,7 @@
         '<div class="stage-links">' + pr.links.map(l=>'<a href="'+l[1]+'"'+(l[1].startsWith('http')?' target="_blank" rel="noopener"':'')+'>'+l[0]+'</a>').join('') + '</div>' +
       '</div>';
     const host = document.getElementById('vizHost');
-    try { vizCleanup = pr.viz(host); } catch(e){ /* fail quietly */ }
+    try { vizCleanup = pr.viz(host); } catch(e){}
   }
 
   /* ============ VIZ 1: cyclical evolution (canvas ring) ============ */
@@ -549,12 +530,12 @@
     const c = document.createElement('canvas'); host.appendChild(c);
     const ctx = c.getContext('2d'); let raf, t = 0, W, H, DPR;
     const phases = ['satellite\nexpansion','homogenisation','transposon\ninvasion','collapse'];
-    const cols = ['#6f8f47','#2f6f4e','#c4622d','#c9922b'];
+    const cols = ['#5f7d3f','#1f6b4f','#b06a2c','#245e8f'];
     function size(){ DPR = Math.min(2, devicePixelRatio||1); W=c.clientWidth; H=c.clientHeight; c.width=W*DPR; c.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0); }
     function draw(){
       size(); ctx.clearRect(0,0,W,H);
       const cx=W/2, cy=H/2+6, R=Math.min(W,H)*0.27;
-      ctx.lineWidth=2; ctx.strokeStyle='#e7ddce';
+      ctx.lineWidth=2; ctx.strokeStyle='#e3e7e2';
       ctx.beginPath(); ctx.arc(cx,cy,R,0,Math.PI*2); ctx.stroke();
       for(let i=0;i<4;i++){
         ctx.strokeStyle=cols[i]; ctx.lineWidth=6; ctx.lineCap='round';
@@ -571,8 +552,8 @@
         const phase=Math.floor(((a%(Math.PI*2))+Math.PI*2)%(Math.PI*2)/(Math.PI/2))%4;
         ctx.fillStyle=cols[phase]; ctx.beginPath(); ctx.arc(x,y,4.5,0,Math.PI*2); ctx.fill();
       }
-      ctx.fillStyle='#201a15'; ctx.font='700 13px Inter, sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
-      ctx.fillText('centromere', cx, cy-6); ctx.fillStyle='#6b6157'; ctx.font='11px Inter';
+      ctx.fillStyle='#1b201d'; ctx.font='600 13px Fraunces, serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.fillText('centromere', cx, cy-6); ctx.fillStyle='#5c655e'; ctx.font='11px Inter';
       ctx.fillText('life cycle', cx, cy+10);
       t+=0.012; raf=requestAnimationFrame(draw);
     }
@@ -580,104 +561,94 @@
     return ()=>cancelAnimationFrame(raf);
   }
 
-  /* ============ VIZ 2: radial phylo tree (SVG, gentle rotation) ============ */
+  /* ============ VIZ 2: radial phylo tree ============ */
   function vizTree(host){
     const svg = mk('svg',{viewBox:'0 0 300 240'}); host.appendChild(svg);
     const g = mk('g'); svg.appendChild(g);
-    const cols=['#2f6f4e','#6f8f47','#c4622d','#c9922b','#245e8f'];
+    const cols=['#1f6b4f','#5f7d3f','#245e8f','#37474a','#b06a2c'];
     const N=26;
     for(let i=0;i<N;i++){
       const a=(i/N)*Math.PI*2;
       const r1=18+ (i%3)*6, r2=88+ (i%4)*8;
       const x1=Math.cos(a)*r1, y1=Math.sin(a)*r1, x2=Math.cos(a)*r2, y2=Math.sin(a)*r2;
-      g.appendChild(mk('path',{d:'M'+x1+','+y1+' Q'+(Math.cos(a)*r2*.55)+','+(Math.sin(a)*r2*.55)+' '+x2+','+y2, fill:'none', stroke:'#cdbfa6', 'stroke-width':1.2}));
+      g.appendChild(mk('path',{d:'M'+x1+','+y1+' Q'+(Math.cos(a)*r2*.55)+','+(Math.sin(a)*r2*.55)+' '+x2+','+y2, fill:'none', stroke:'#cdd6cd', 'stroke-width':1.2}));
       const dot=mk('circle',{cx:x2, cy:y2, r:3.4, fill:cols[i%cols.length]});
       dot.appendChild(mk('animate',{attributeName:'r', values:'3;5;3', dur:(2+ (i%5)*0.4)+'s', begin:(i*0.1)+'s', repeatCount:'indefinite'}));
       g.appendChild(dot);
     }
-    g.appendChild(mk('circle',{cx:0,cy:0,r:9,fill:'#21503a'}));
-    let a=0, raf; (function spin(){ a+=0.12; g.setAttribute('transform','translate(150,124) rotate('+a+')'); raf=requestAnimationFrame(spin);})();
+    g.appendChild(mk('circle',{cx:0,cy:0,r:9,fill:'#143f2e'}));
+    let a=0, raf; (function spin(){ a+=0.1; g.setAttribute('transform','translate(150,124) rotate('+a+')'); raf=requestAnimationFrame(spin);})();
     return ()=>cancelAnimationFrame(raf);
   }
 
-  /* ============ VIZ 3: CHARLA crossover (interactive drag) ============ */
+  /* ============ VIZ 3: CHARLA crossover (static, non-interactive) ============ */
   function vizCharla(host){
     const svg = mk('svg',{viewBox:'0 0 300 240'}); host.appendChild(svg);
-    const W=300, y1=92, y2=152, x0=30, x1=270;
-    const mum='#245e8f', dad='#c4622d';
-    const leg=(x,col,txt)=>{ svg.appendChild(mk('circle',{cx:x,cy:36,r:5,fill:col}));
-      const t=mk('text',{x:x+10,y:40,'font-size':11,fill:'#443a30','font-family':'Inter'}); t.textContent=txt; svg.appendChild(t); };
-    leg(40,mum,'maternal'); leg(150,dad,'paternal');
-    let cx=150;
-    const topBar=mk('rect',{x:x0,y:y1-9,height:18,rx:5,fill:mum}); svg.appendChild(topBar);
-    const topBar2=mk('rect',{x:cx,y:y1-9,height:18,rx:5,fill:dad}); svg.appendChild(topBar2);
-    const botBar=mk('rect',{x:x0,y:y2-9,height:18,rx:5,fill:dad}); svg.appendChild(botBar);
-    const botBar2=mk('rect',{x:cx,y:y2-9,height:18,rx:5,fill:mum}); svg.appendChild(botBar2);
-    const lblT=mk('text',{x:x0,y:y1-16,'font-size':10,fill:'#6b6157','font-family':'Inter'}); lblT.textContent='long read · chromosome A'; svg.appendChild(lblT);
-    const lblB=mk('text',{x:x0,y:y2+26,'font-size':10,fill:'#6b6157','font-family':'Inter'}); lblB.textContent='long read · chromosome B'; svg.appendChild(lblB);
-    const line=mk('line',{y1:y1-24,y2:y2+18,stroke:'#21503a','stroke-width':2,'stroke-dasharray':'4 3'}); svg.appendChild(line);
-    const handle=mk('circle',{cy:(y1+y2)/2,r:11,fill:'#fffdf9',stroke:'#21503a','stroke-width':2.5,cursor:'ew-resize'}); svg.appendChild(handle);
-    const hx=mk('text',{'font-size':12,'font-weight':700,fill:'#21503a','text-anchor':'middle','font-family':'Inter'}); hx.textContent='✕'; svg.appendChild(hx);
-    const co=mk('text',{y:y1-40,'font-size':11,'font-weight':700,fill:'#21503a','text-anchor':'middle','font-family':'Inter'}); co.textContent='crossover'; svg.appendChild(co);
-
-    function render(){
-      topBar.setAttribute('width', Math.max(0,cx-x0)); topBar2.setAttribute('x',cx); topBar2.setAttribute('width',Math.max(0,x1-cx));
-      botBar.setAttribute('width',Math.max(0,cx-x0)); botBar2.setAttribute('x',cx); botBar2.setAttribute('width',Math.max(0,x1-cx));
-      line.setAttribute('x1',cx); line.setAttribute('x2',cx);
-      handle.setAttribute('cx',cx); hx.setAttribute('x',cx); hx.setAttribute('y',(y1+y2)/2+4);
-      co.setAttribute('x',cx);
+    const y1=96, y2=156, x0=30, x1=270, cx=150, h=18;
+    const A='#245e8f', B='#b06a2c';
+    const leg=(x,col,txt)=>{ svg.appendChild(mk('circle',{cx:x,cy:34,r:5,fill:col}));
+      const t=mk('text',{x:x+10,y:38,'font-size':11,fill:'#3d453f','font-family':'Inter'}); t.textContent=txt; svg.appendChild(t); };
+    leg(40,A,'parent A'); leg(150,B,'parent B');
+    // labels
+    const lblT=mk('text',{x:x0,y:y1-16,'font-size':10,fill:'#5c655e','font-family':'Inter'}); lblT.textContent='long read · chromosome 1'; svg.appendChild(lblT);
+    const lblB=mk('text',{x:x0,y:y2+27,'font-size':10,fill:'#5c655e','font-family':'Inter'}); lblB.textContent='long read · chromosome 2'; svg.appendChild(lblB);
+    // recombinant reads: reciprocal colouring either side of the crossover
+    svg.appendChild(mk('rect',{x:x0,y:y1-h/2,width:cx-x0,height:h,rx:4,fill:A}));
+    svg.appendChild(mk('rect',{x:cx,y:y1-h/2,width:x1-cx,height:h,rx:4,fill:B}));
+    svg.appendChild(mk('rect',{x:x0,y:y2-h/2,width:cx-x0,height:h,rx:4,fill:B}));
+    svg.appendChild(mk('rect',{x:cx,y:y2-h/2,width:x1-cx,height:h,rx:4,fill:A}));
+    // k-mer ticks along the reads (implying k-mer resolution)
+    for(let x=x0+6; x<x1; x+=11){
+      svg.appendChild(mk('line',{x1:x,y1:y1-h/2+2,x2:x,y2:y1+h/2-2,stroke:'rgba(255,255,255,.55)','stroke-width':1}));
+      svg.appendChild(mk('line',{x1:x,y1:y2-h/2+2,x2:x,y2:y2+h/2-2,stroke:'rgba(255,255,255,.55)','stroke-width':1}));
     }
-    render();
-    function pos(ev){ const r=svg.getBoundingClientRect(); const px=(ev.touches?ev.touches[0].clientX:ev.clientX); return (px-r.left)/r.width*W; }
-    let drag=false, hint=0;
-    const down=e=>{drag=true; hint=1; e.preventDefault();};
-    const move=e=>{ if(!drag) return; cx=Math.max(x0+14,Math.min(x1-14,pos(e))); render(); };
-    const up=()=>drag=false;
-    handle.addEventListener('mousedown',down); svg.addEventListener('mousemove',move); window.addEventListener('mouseup',up);
-    handle.addEventListener('touchstart',down,{passive:false}); svg.addEventListener('touchmove',move,{passive:false}); window.addEventListener('touchend',up);
-    let raf; (function nudge(){ if(!drag && hint<1){ cx=150+Math.sin(Date.now()/650)*34; render(); } raf=requestAnimationFrame(nudge); })();
-    return ()=>{ cancelAnimationFrame(raf); window.removeEventListener('mouseup',up); window.removeEventListener('touchend',up); };
+    // crossover marker
+    svg.appendChild(mk('line',{x1:cx,y1:y1-24,x2:cx,y2:y2+18,stroke:'#143f2e','stroke-width':2,'stroke-dasharray':'4 3'}));
+    const co=mk('text',{x:cx,y:y1-30,'font-size':11,'font-weight':700,fill:'#143f2e','text-anchor':'middle','font-family':'Inter'}); co.textContent='crossover'; svg.appendChild(co);
+    const pulse=mk('circle',{cx:cx,cy:(y1+y2)/2,r:6,fill:'none',stroke:'#143f2e','stroke-width':1.5});
+    pulse.appendChild(mk('animate',{attributeName:'r',values:'5;13;5',dur:'2.2s',repeatCount:'indefinite'}));
+    pulse.appendChild(mk('animate',{attributeName:'opacity',values:'.9;0;.9',dur:'2.2s',repeatCount:'indefinite'}));
+    svg.appendChild(pulse);
+    svg.appendChild(mk('circle',{cx:cx,cy:(y1+y2)/2,r:5,fill:'#fffdf9',stroke:'#143f2e','stroke-width':2}));
+    return ()=>{};
   }
 
-  /* ============ VIZ 4: chromatin folding (canvas) ============ */
+  /* ============ VIZ 4: chromatin folding ============ */
   function vizFold(host){
     const c=document.createElement('canvas'); host.appendChild(c); const ctx=c.getContext('2d');
-    let raf,t=0,W,H,DPR;
+    let raf,t=0,W,H,DPR; const N=60;
     function size(){ DPR=Math.min(2,devicePixelRatio||1); W=c.clientWidth; H=c.clientHeight; c.width=W*DPR; c.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);}
-    const N=60;
     function draw(){
       size(); ctx.clearRect(0,0,W,H);
-      const cx=W/2, cy=H/2+4;
-      const pts=[];
+      const cx=W/2, cy=H/2+4; const pts=[];
       for(let i=0;i<N;i++){
-        const u=i/(N-1);
-        const fold=Math.sin(t)*0.5+0.5;
-        const straightX=(u-0.5)*(W*0.8), straightY=Math.sin(u*6+t)*8;
-        const loopX=Math.sin(u*Math.PI*4+t*0.3)*(W*0.28);
-        const loopY=Math.cos(u*Math.PI*4+t*0.3)*(H*0.22) + Math.sin(u*Math.PI*2)*10;
-        pts.push([cx+straightX*(1-fold)+loopX*fold, cy+straightY*(1-fold)+loopY*fold]);
+        const u=i/(N-1); const fold=Math.sin(t)*0.5+0.5;
+        const sx=(u-0.5)*(W*0.8), sy=Math.sin(u*6+t)*8;
+        const lx=Math.sin(u*Math.PI*4+t*0.3)*(W*0.28);
+        const ly=Math.cos(u*Math.PI*4+t*0.3)*(H*0.22) + Math.sin(u*Math.PI*2)*10;
+        pts.push([cx+sx*(1-fold)+lx*fold, cy+sy*(1-fold)+ly*fold]);
       }
-      ctx.strokeStyle='#6f8f47'; ctx.lineWidth=3; ctx.lineCap='round'; ctx.beginPath();
+      ctx.strokeStyle='#5f7d3f'; ctx.lineWidth=3; ctx.lineCap='round'; ctx.beginPath();
       pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])); ctx.stroke();
       for(let i=0;i<N;i++){ for(let j=i+4;j<N;j+=7){
         const dx=pts[i][0]-pts[j][0], dy=pts[i][1]-pts[j][1], d=Math.hypot(dx,dy);
-        if(d<26){ ctx.strokeStyle='rgba(196,98,45,'+(1-d/26)*0.7+')'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(pts[i][0],pts[i][1]); ctx.lineTo(pts[j][0],pts[j][1]); ctx.stroke(); }
+        if(d<26){ ctx.strokeStyle='rgba(176,106,44,'+(1-d/26)*0.7+')'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(pts[i][0],pts[i][1]); ctx.lineTo(pts[j][0],pts[j][1]); ctx.stroke(); }
       }}
-      pts.forEach((p,i)=>{ ctx.fillStyle= i%9===0?'#c4622d':'#3f5a2a'; ctx.beginPath(); ctx.arc(p[0],p[1], i%9===0?3.6:2.2,0,7); ctx.fill(); });
+      pts.forEach((p,i)=>{ ctx.fillStyle= i%9===0?'#b06a2c':'#37474a'; ctx.beginPath(); ctx.arc(p[0],p[1], i%9===0?3.6:2.2,0,7); ctx.fill(); });
       t+=0.02; raf=requestAnimationFrame(draw);
     }
     draw(); return ()=>cancelAnimationFrame(raf);
   }
 
-  /* ============ VIZ 5: phylo tree with novel variants lighting up ============ */
+  /* ============ VIZ 5: phylo tree with novel variants ============ */
   function vizPhylo(host){
     const svg=mk('svg',{viewBox:'0 0 300 240'}); host.appendChild(svg);
     function node(x,y,len,depth){
       if(depth===0){
         const novel=Math.random()<0.32;
-        const dot=mk('circle',{cx:x,cy:y,r:novel?4:2.6, fill:novel?'#c4622d':'#6f8f47'});
+        const dot=mk('circle',{cx:x,cy:y,r:novel?4:2.6, fill:novel?'#b06a2c':'#5f7d3f'});
         if(novel){ dot.appendChild(mk('animate',{attributeName:'r',values:'3;6;3',dur:'1.6s',repeatCount:'indefinite'}));
-          const glow=mk('circle',{cx:x,cy:y,r:8,fill:'none',stroke:'#e08a4f','stroke-width':1});
+          const glow=mk('circle',{cx:x,cy:y,r:8,fill:'none',stroke:'#d59a63','stroke-width':1});
           glow.appendChild(mk('animate',{attributeName:'r',values:'4;11;4',dur:'1.6s',repeatCount:'indefinite'}));
           glow.appendChild(mk('animate',{attributeName:'opacity',values:'.8;0;.8',dur:'1.6s',repeatCount:'indefinite'}));
           svg.appendChild(glow);
@@ -687,12 +658,12 @@
       const dy=len*0.5;
       [-1,1].forEach(s=>{
         const nx=x+len*0.7, ny=y+s*dy;
-        svg.appendChild(mk('path',{d:'M'+x+','+y+' H'+(x+18)+' V'+ny+' H'+(nx+14),fill:'none',stroke:'#cdbfa6','stroke-width':1.3}));
+        svg.appendChild(mk('path',{d:'M'+x+','+y+' H'+(x+18)+' V'+ny+' H'+(nx+14),fill:'none',stroke:'#cdd6cd','stroke-width':1.3}));
         node(nx+14, ny, len*0.62, depth-1);
       });
     }
     node(20,120,150,4);
-    const t=mk('text',{x:150,y:230,'font-size':11,fill:'#6b6157','text-anchor':'middle','font-family':'Inter'});
+    const t=mk('text',{x:150,y:230,'font-size':11,fill:'#5c655e','text-anchor':'middle','font-family':'Inter'});
     t.textContent='● known    ● novel functional variant'; svg.appendChild(t);
     return ()=>{};
   }
@@ -702,72 +673,65 @@
     const c=document.createElement('canvas'); host.appendChild(c); const ctx=c.getContext('2d');
     let raf,t=0,W,H,DPR;
     function size(){ DPR=Math.min(2,devicePixelRatio||1); W=c.clientWidth; H=c.clientHeight; c.width=W*DPR; c.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);}
-    function roundRect(x,y,w,h,r){ r=Math.min(r,w/2,h/2); ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
-    const reads=[]; for(let i=0;i<9;i++) reads.push({x0:Math.random(), w:0.28+Math.random()*0.22, c: i%2?'#6f8f47':'#245e8f', delay:i*0.12});
+    function rr(x,y,w,h,r){ r=Math.min(r,w/2,h/2); ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+    // overlapping reads that tile left->right across the genome, in stacked lanes
+    const reads=[
+      {s:0.00,e:0.30,lane:0},{s:0.10,e:0.42,lane:1},{s:0.22,e:0.52,lane:2},
+      {s:0.36,e:0.66,lane:0},{s:0.48,e:0.78,lane:1},{s:0.60,e:0.90,lane:2},
+      {s:0.74,e:1.00,lane:0},{s:0.84,e:1.00,lane:1}
+    ].map((r,i)=>({...r, c: i%2?'#5f7d3f':'#245e8f'}));
+    const build=1.0, hold=0.55, cyc=build+hold;
+    function ease(x){ return x<.5 ? 2*x*x : 1-Math.pow(-2*x+2,2)/2; }
     function draw(){
       size(); ctx.clearRect(0,0,W,H);
-      const top=40, gap=Math.max(13,H*0.055);
-      ctx.font='600 11px Inter'; ctx.fillStyle='#6b6157'; ctx.textAlign='left';
-      ctx.fillText('HiFi reads', 20, 24);
-      reads.forEach((r,i)=>{
-        const prog=Math.max(0,Math.min(1,(Math.sin(t*0.5)+1)/2 - r.delay*0.05));
-        const targetY=top+i*gap;
-        const rx=20 + r.x0*(W-40-r.w*(W-40))*(1-prog*0.7);
-        const rw=r.w*(W-40);
-        ctx.fillStyle=r.c; ctx.globalAlpha=0.85;
-        roundRect(rx, targetY, rw, 9, 4); ctx.fill();
+      const mx=22, w=W-44, laneY=52, laneH=Math.min(26,(H-120)/3), rh=9;
+      const phase=(t)%cyc, front=ease(Math.min(1, phase/build));
+      ctx.font='600 11px Inter'; ctx.textAlign='left'; ctx.fillStyle='#5c655e';
+      ctx.fillText('overlapping HiFi reads', mx, 26);
+      // reads revealed as the assembly front sweeps across
+      reads.forEach(r=>{
+        if(front < r.s) return;
+        const rev=Math.min(1,(front-r.s)/0.05);
+        const x=mx + r.s*w, bw=(r.e-r.s)*w*rev, y=laneY + r.lane*laneH;
+        ctx.globalAlpha=0.9; ctx.fillStyle=r.c; rr(x,y,bw,rh,4); ctx.fill();
       });
       ctx.globalAlpha=1;
-      const cprog=(Math.sin(t*0.5)+1)/2;
-      ctx.fillStyle='#9a4a1f'; ctx.fillText('→ assembled contig', 20, H-42);
-      ctx.fillStyle='#c4622d'; roundRect(20, H-34, (W-40)*cprog, 12, 5); ctx.fill();
-      t+=0.03; raf=requestAnimationFrame(draw);
+      // moving assembly front line
+      const fx=mx+front*w;
+      ctx.strokeStyle='rgba(20,63,46,.35)'; ctx.setLineDash([3,3]); ctx.lineWidth=1.5;
+      ctx.beginPath(); ctx.moveTo(fx,laneY-10); ctx.lineTo(fx,laneY+3*laneH+18); ctx.stroke(); ctx.setLineDash([]);
+      // consensus contig growing underneath
+      const cy=laneY+3*laneH+30;
+      ctx.fillStyle='#8a531f'; ctx.fillText('consensus contig', mx, cy-8);
+      ctx.fillStyle='#eae2d6'; rr(mx,cy,w,12,6); ctx.fill();
+      ctx.fillStyle='#b06a2c'; rr(mx,cy,w*front,12,6); ctx.fill();
+      t+=0.012; raf=requestAnimationFrame(draw);
     }
     draw(); return ()=>cancelAnimationFrame(raf);
   }
 
-  /* boot projects */
   select(0);
 
   /* =====================================================================
-     PRESS
+     PRESS — real links from CV
      ===================================================================== */
   const PRESS = [
-    {outlet:'Canal Sur · TV', head:'"The young Andalusian shining at Cambridge"', meta:'"La tarde, aquí y ahora"', reach:'Prime-time TV'},
-    {outlet:'ABC · Newspaper', head:'"A scientist from Seville at Cambridge"', meta:'4-article series + social shorts', reach:'~1M views'},
-    {outlet:'RNE · National Radio', head:'"They study in Cambridge"', meta:'Spaniards Abroad', reach:'National radio'},
-    {outlet:'El Diario Montañés', head:'"The new voices of science"', meta:'Front-cover feature (UIMP)', reach:'Front page'},
-    {outlet:'OBF', head:'"Bioinformatics, Spain and I"', meta:'Open Bioinformatics Foundation', reach:'Community'},
-    {outlet:'Univ. of Seville', head:'From Erasmus to a "la Caixa" PhD abroad', meta:'Alumni features · 2022 · 2024', reach:'Institutional'}
+    {outlet:'ABC · Newspaper', head:'A scientist from Seville at Cambridge', meta:'Feature series + social shorts', reach:'~1M views', href:'https://www.abc.es/sevilla/ciudad/ciencia-poesia-relacionadas-20250720092016-nts.html'},
+    {outlet:'RNE · RTVE Radio', head:'"They study in Cambridge"', meta:'Españoles en el exterior', reach:'National radio', href:'https://www.rtve.es/play/audios/espanoles-en-el-exterior/espanoles-exterior-estudian-cambridge/16639413/'},
+    {outlet:'El Diario Montañés', head:'"The new voices of science"', meta:'Front-cover feature · UIMP', reach:'Front page', href:'https://www.eldiariomontanes.es/culturas/uimp/nuevas-voces-ciencia-20240812075215-nt.html'},
+    {outlet:'Open Bioinformatics Fdn.', head:'"Bioinformatics, Spain and I"', meta:'OBF blog', reach:'Community', href:'https://www.open-bio.org/2024/10/24/bioinformatics-spain-and-i/'},
+    {outlet:'University of Seville', head:'Postgraduate abroad with a "la Caixa" Fellowship', meta:'Institutional feature', reach:'University', href:'https://www.us.es/actualidad-de-la-us/posgrado-en-el-extranjero-con-una-beca-la-caixa'}
   ];
   document.getElementById('pressGrid').innerHTML = PRESS.map(p=>
-    '<div class="press">' +
+    '<a class="press" href="'+p.href+'" target="_blank" rel="noopener">' +
       '<div class="outlet">'+p.outlet+'</div>' +
       '<div class="headline">'+p.head+'</div>' +
-      '<div class="meta"><span>'+p.meta+'</span><span class="reach">'+p.reach+'</span></div>' +
-    '</div>').join('');
+      '<div class="meta"><span>'+p.meta+'</span><span class="reach">'+p.reach+' <span class="arrow">→</span></span></div>' +
+    '</a>').join('');
 
-  /* =====================================================================
-     scroll reveal
-     ===================================================================== */
+  /* scroll reveal */
   const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  /* =====================================================================
-     draggable hero chromosome (fun easter egg)
-     ===================================================================== */
-  (function(){
-    const svg=document.getElementById('chromo'); const g=document.getElementById('chromoG'); if(!svg||!g) return;
-    let a=0, va=0.3, drag=false, lastX=0, raf;
-    function loop(){ if(!drag){ a+=va; va*=0.985; if(Math.abs(va)<0.05) va=0.15; } g.setAttribute('transform','translate(50,50) rotate('+a+')'); raf=requestAnimationFrame(loop); }
-    loop();
-    const getX=e=>e.touches?e.touches[0].clientX:e.clientX;
-    svg.addEventListener('mousedown',e=>{drag=true; lastX=getX(e); e.preventDefault();});
-    svg.addEventListener('touchstart',e=>{drag=true; lastX=getX(e);},{passive:true});
-    window.addEventListener('mousemove',e=>{ if(!drag)return; const dx=getX(e)-lastX; a+=dx*0.8; va=dx*0.4; lastX=getX(e); });
-    window.addEventListener('touchmove',e=>{ if(!drag)return; const dx=getX(e)-lastX; a+=dx*0.8; va=dx*0.4; lastX=getX(e); },{passive:true});
-    window.addEventListener('mouseup',()=>drag=false); window.addEventListener('touchend',()=>drag=false);
-  })();
   </script>
 </body>
 </html>
