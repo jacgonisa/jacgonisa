@@ -26,7 +26,7 @@ Last and most importantly, as a first-gen uni student, I am very concerned about
 
 ---
 
-## About Me
+## About me
 
 I'm a PhD student at the **University of Cambridge** (Department of Plant Sciences & King's College), funded by the **"la Caixa" Foundation Postgraduate Fellowship**. My research focuses on **bioinformatics**, **phylogenomics**, and **comparative genomics** in plant sciences.
 
@@ -48,20 +48,12 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-### Bioinformatics & Data Science
+### Bioinformatics and Data Science
 ![Nextflow](https://img.shields.io/badge/Nextflow-24B064?style=for-the-badge&logo=nextflow&logoColor=white)
 ![ETE Toolkit](https://img.shields.io/badge/ETE_Toolkit-Phylogenomics-orange?style=for-the-badge)
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![SLURM](https://img.shields.io/badge/SLURM-HPC-blue?style=for-the-badge)
-
-### Development & Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![SPARQL](https://img.shields.io/badge/SPARQL-E8274B?style=for-the-badge)
-
-
 
 </div>
 
@@ -79,7 +71,7 @@ I'm a PhD student at the **University of Cambridge** (Department of Plant Scienc
 
 ## Selected Publications
 
-**Włodzimierz, P.*, Perez-Roman, E.*, et al.** (including **González-Isa, J.**) (2025). *Cyclical evolution of centromere architecture across 193 eukaryote species.* **Submitted**
+**Włodzimierz, P.*, Perez-Roman, E.*, et al.** (including **González-Isa, J.**) (2025). *Cyclical evolution of centromere architecture across 193 eukaryote species.* **In review**
 
 
 
